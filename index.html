@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>geometry genious</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="container mx-auto mt-5">
+    <div>
+      <header></header>
+      <main>
+        <div class="flex flex-col md:flex-row">
+          <!-- geometry shapes -->
+          <section
+            class="md:flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-8 justify-center items-center"
+          >
+            <!-- item-1: triangle card -->
+            <div class="card bg-base-100 w-80 shadow-xl">
+              <figure>
+                <img src="/images/triangle.png" alt="Shoes" />
+              </figure>
+              <div class="card-body flex flex-col justify-center items-center">
+                <h2 class="card-title">Triangle</h2>
+                <p>Area (A) = 0.5 x b x h</p>
+
+                <div class="flex items-center gap-2">
+                  <div class="flex items-center gap-2">
+                    <input
+                      type="text"
+                      placeholder="b"
+                      id="triangle-base"
+                      class="text-lg p-1 rounded-md w-24 border-2"
+                    />
+                    <span class="">cm</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <input
+                      type="text"
+                      placeholder="h"
+                      id="triangle-height"
+                      class="text-lg p-1 rounded-md w-24 border-2"
+                    />
+                    <span>cm </span>
+                  </div>
+                </div>
+
+                <p>
+                  Area: <span id="area-result"></span>
+                  <span>cm<sup>2</sup></span>
+                </p>
+
+                <div class="card-actions justify-end">
+                  <button
+                    onclick="triangleCalculate()"
+                    class="btn btn-primary w-full"
+                  >
+                    Buy Now
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- item-2: rectangle card -->
+            <div class="card bg-base-100 w-80 shadow-xl">
+              <figure>
+                <img
+                  src="images/rectangle.png"
+                  alt="Shoes"
+                />
+              </figure>
+              <div class="card-body flex flex-col justify-center items-center">
+                <h2 class="card-title">Rectangle</h2>
+                <p>Area (A) = w x l</p>
+
+                <div class="flex items-center gap-2">
+                  <div class="flex items-center gap-2">
+                    <input
+                      type="text"
+                      placeholder="w"
+                      id="rectangle-width"
+                      class="text-lg p-1 rounded-md w-24 border-2"
+                    />
+                    <span class="">cm</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <input
+                      type="text"
+                      placeholder="l"
+                      id="rectangle-length"
+                      class="text-lg p-1 rounded-md w-24 border-2"
+                    />
+                    <span>cm </span>
+                  </div>
+                </div>
+
+                <p>
+                  Area: <span id="area-result-rectangle"></span>
+                  <span>cm<sup>2</sup></span>
+                </p>
+
+                <div class="card-actions justify-end">
+                  <button
+                    onclick="rectangleCalculate()"
+                    class="btn btn-primary w-full"
+                  >
+                    Buy Now
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- triangle card -->
+            <div class="card bg-base-100 w-80 shadow-xl">
+              <figure>
+                <img
+                  src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                  alt="Shoes"
+                />
+              </figure>
+              <div class="card-body">
+                <h2 class="card-title">Shoes!</h2>
+                <p>If a dog chews shoes whose shoes does he choose?</p>
+                <div class="card-actions justify-end">
+                  <button class="btn btn-primary">Buy Now</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- triangle card -->
+            <div class="card bg-base-100 w-80 shadow-xl">
+              <figure>
+                <img
+                  src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                  alt="Shoes"
+                />
+              </figure>
+              <div class="card-body">
+                <h2 class="card-title">Shoes!</h2>
+                <p>If a dog chews shoes whose shoes does he choose?</p>
+                <div class="card-actions justify-end">
+                  <button class="btn btn-primary">Buy Now</button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Age Calculation -->
+          <section>
+            <h3 class="text-2xl">age calculation</h3>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <!-- script links -->
+     <!-- triangle calculate -->
+    <script src="scripts/triangle-calculate.js"></script>
+    <!-- rectangle Calculate -->
+     <script src="scripts/rectangle-calculate.js"></script>
+  </body>
+</html>

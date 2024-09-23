@@ -1,3 +1,4 @@
+/*
 function pentagonCalculate() {
   // pentagon p input
   const pentagonPInput = document.getElementById("pentagon-p");
@@ -17,4 +18,29 @@ function pentagonCalculate() {
 
   pentagonPInput.value = "";
   pentagonBInput.value = "";
+}
+
+*/
+
+// use advanced way to doing this
+
+function pantagonCalculate() {
+  const pantagonA = id("pentagon-p");
+  const pantagonB = id("pentagon-b");
+
+  const result = 0.5 * pantagonA * pantagonB;
+
+  innerTextId("area-result-pentagon", result);
+}
+
+function id(params) {
+  const inputText = document.getElementById(params);
+  const inputValue = inputText.value;
+  inputText.value = "";
+  return parseFloat(inputValue);
+}
+
+function innerTextId(params, resultValue) {
+  const text = document.getElementById(params);
+  text.innerText = resultValue;
 }

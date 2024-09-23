@@ -159,19 +159,140 @@
               </div>
             </div>
 
-            <!-- triangle card -->
+            <!-- item-4: rhombus card -->
             <div class="card bg-base-100 w-80 shadow-xl">
               <figure>
-                <img
-                  src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                  alt="Shoes"
-                />
+                <img src="images/rhombus.png" alt="Shoes" />
               </figure>
-              <div class="card-body">
-                <h2 class="card-title">Shoes!</h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
-                <div class="card-actions justify-end">
-                  <button class="btn btn-primary">Buy Now</button>
+              <div class="card-body flex flex-col justify-center items-center">
+                <h2 class="card-title">Rhombus</h2>
+                <p>Area (A) = 0.5 x d1 x d2</p>
+
+                <div class="flex items-center gap-2">
+                  <div class="flex items-center gap-2">
+                    <input
+                      type="text"
+                      placeholder="d1"
+                      id="rhombus-d1"
+                      class="text-lg p-1 rounded-md w-24 border-2"
+                    />
+                    <span class="">cm</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <input
+                      type="text"
+                      placeholder="d2"
+                      id="rhombus-d2"
+                      class="text-lg p-1 rounded-md w-24 border-2"
+                    />
+                    <span>cm </span>
+                  </div>
+                </div>
+
+                <p>
+                  Area: <span id="area-result-rhombus"></span>
+                  <span>cm<sup>2</sup></span>
+                </p>
+
+                <div class="card-actions w-full">
+                  <button
+                    onclick="rhombusCalculate()"
+                    class="btn btn-primary w-full"
+                  >
+                    Rhombus
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- item-5: pentagon card -->
+            <div class="card bg-base-100 w-80 shadow-xl">
+              <figure>
+                <img src="images/pentagon.png" alt="Shoes" />
+              </figure>
+              <div class="card-body flex flex-col justify-center items-center">
+                <h2 class="card-title">Pentagon</h2>
+                <p>Area (A) = 0.5 x p x b</p>
+
+                <div class="flex items-center gap-2">
+                  <div class="flex items-center gap-2">
+                    <input
+                      type="text"
+                      placeholder="p"
+                      id="pentagon-p"
+                      class="text-lg p-1 rounded-md w-24 border-2"
+                    />
+                    <span class="">cm</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <input
+                      type="text"
+                      placeholder="b"
+                      id="pentagon-b"
+                      class="text-lg p-1 rounded-md w-24 border-2"
+                    />
+                    <span>cm </span>
+                  </div>
+                </div>
+
+                <p>
+                  Area: <span id="area-result-pentagon"></span>
+                  <span>cm<sup>2</sup></span>
+                </p>
+
+                <div class="card-actions w-full">
+                  <button
+                    onclick="pentagonCalculate()"
+                    class="btn btn-primary w-full"
+                  >
+                    Pentagon
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- item-6: ellipse card -->
+            <div class="card bg-base-100 w-80 shadow-xl">
+              <figure>
+                <img src="images/ellipse.png" alt="Shoes" />
+              </figure>
+              <div class="card-body flex flex-col justify-center items-center">
+                <h2 class="card-title">Ellipse</h2>
+                <p>Area (A) = &pi;ab</p>
+
+                <div class="flex items-center gap-2">
+                  <div class="flex items-center gap-2">
+                    <input
+                      type="text"
+                      placeholder="a"
+                      id="ellipse-a"
+                      class="text-lg p-1 rounded-md w-24 border-2"
+                    />
+                    <span class="">cm</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <input
+                      type="text"
+                      placeholder="b"
+                      id="ellipse-b"
+                      class="text-lg p-1 rounded-md w-24 border-2"
+                    />
+                    <span>cm </span>
+                  </div>
+                </div>
+
+                <p>
+                  Area: <span id="area-result-ellipse"></span>
+                  <span>cm<sup>2</sup></span>
+                </p>
+
+                <div class="card-actions w-full">
+                  <button
+                    onclick="ellipseCalculate()"
+                    class="btn btn-primary w-full"
+                  >
+                    Pentagon
+                  </button>
                 </div>
               </div>
             </div>
@@ -194,5 +315,14 @@
 
     <!-- parallelogram Calculate -->
     <script src="scripts/parallelogram-calculate.js"></script>
+
+    <!-- rhombus calculate -->
+    <script src="scripts/rhombus-calculate.js"></script>
+
+    <!-- pentagon caluclate -->
+    <script src="scripts/pentagon-calculate.js"></script>
+
+    <!-- ellipse calculate -->
+    <script src="scripts/ellipse-calculate.js"></script>
   </body>
 </html>

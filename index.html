@@ -56,12 +56,12 @@
                   <span>cm<sup>2</sup></span>
                 </p>
 
-                <div class="card-actions justify-end">
+                <div class="card-actions w-full">
                   <button
                     onclick="triangleCalculate()"
                     class="btn btn-primary w-full"
                   >
-                    Buy Now
+                    Triangle
                   </button>
                 </div>
               </div>
@@ -70,10 +70,7 @@
             <!-- item-2: rectangle card -->
             <div class="card bg-base-100 w-80 shadow-xl">
               <figure>
-                <img
-                  src="images/rectangle.png"
-                  alt="Shoes"
-                />
+                <img src="images/rectangle.png" alt="Shoes" />
               </figure>
               <div class="card-body flex flex-col justify-center items-center">
                 <h2 class="card-title">Rectangle</h2>
@@ -105,30 +102,59 @@
                   <span>cm<sup>2</sup></span>
                 </p>
 
-                <div class="card-actions justify-end">
+                <div class="card-actions w-full">
                   <button
                     onclick="rectangleCalculate()"
                     class="btn btn-primary w-full"
                   >
-                    Buy Now
+                    Rectangle
                   </button>
                 </div>
               </div>
             </div>
 
-            <!-- triangle card -->
+            <!-- item-3: parallelogram card -->
             <div class="card bg-base-100 w-80 shadow-xl">
               <figure>
-                <img
-                  src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                  alt="Shoes"
-                />
+                <img src="images/parallelogram.png" alt="Shoes" />
               </figure>
-              <div class="card-body">
-                <h2 class="card-title">Shoes!</h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
-                <div class="card-actions justify-end">
-                  <button class="btn btn-primary">Buy Now</button>
+              <div class="card-body flex flex-col justify-center items-center">
+                <h2 class="card-title">Rectangle</h2>
+                <p>Area (A) = b x h</p>
+
+                <div class="flex items-center gap-2">
+                  <div class="flex items-center gap-2">
+                    <input
+                      type="text"
+                      placeholder="b"
+                      id="parallelogram-base"
+                      class="text-lg p-1 rounded-md w-24 border-2"
+                    />
+                    <span class="">cm</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <input
+                      type="text"
+                      placeholder="h"
+                      id="parallelogram-height"
+                      class="text-lg p-1 rounded-md w-24 border-2"
+                    />
+                    <span>cm </span>
+                  </div>
+                </div>
+
+                <p>
+                  Area: <span id="area-result-parallelogram"></span>
+                  <span>cm<sup>2</sup></span>
+                </p>
+
+                <div class="card-actions w-full">
+                  <button
+                    onclick="parallelogramCalculate()"
+                    class="btn btn-primary w-full"
+                  >
+                    Parallelogram
+                  </button>
                 </div>
               </div>
             </div>
@@ -160,9 +186,13 @@
     </div>
 
     <!-- script links -->
-     <!-- triangle calculate -->
+    <!-- triangle calculate -->
     <script src="scripts/triangle-calculate.js"></script>
+
     <!-- rectangle Calculate -->
-     <script src="scripts/rectangle-calculate.js"></script>
+    <script src="scripts/rectangle-calculate.js"></script>
+
+    <!-- parallelogram Calculate -->
+    <script src="scripts/parallelogram-calculate.js"></script>
   </body>
 </html>
